@@ -1,0 +1,282 @@
+<!doctype html>
+<!--
+Nick Weil
+AVF
+May 2012
+Project 1
+May 5, 2012
+
+HTML FILE
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Auto LogBook Landing Page</title>
+
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Mobile IE needs ClearType for smoothing fonts -->
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- StyleSheets under here -->
+    <link rel="stylesheet"
+        href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+    <script src="js/libs/modernizr.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAk7lVO1OisoDrF1WX95u09oNBVs7PK6Kk&sensor=true"></script>
+</head>
+
+<body>
+        <!-- Main Page Call  -->
+    <div data-role="page" id="home">
+       <p align='left'><h3>Nick Weil</h3></p>
+       <p>AVF 1205</p>
+            <div data-role="header" id="header" data-theme="d"
+                data-position="center">
+                <center>
+                  <p><img src="images/logbook_header_logo.png" alt=""></center>
+                  
+                
+            </div>
+            <!-- Feature/CTA implementation -->
+            <div data-role="content" align="center"></div>
+            <!-- List of links to other pages, done in a 'listview' to stack them -->
+            
+            <div>
+                <ul data-role="listview" class="menubuttons" data-theme="d">
+                    <li><a href="https://speedquest.cloudant.com/asdweek3/_design/asdweek3/index.html" id="originalAppButton">Original CRUD app</a></li>
+                    <li><a href="#" id="revisedAppButton">Revised CRUD app</a></li>
+                    <li><a href="#nativeFeatures" id="nativeFeaturesButton">iOS/Android Native Features</a></li>
+                    <li><a href="#researchPage" id="researchButton">Research(Discussions/Videos)</a></li>
+
+                </ul>
+            </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+        
+    <!-- NATIVE FEATURES PAGE -->
+    <div data-role="page" id="nativeFeatures" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+            <h1>Native Features Page</h1>
+        </div>
+        <div data-role="content" align="left">
+            <ul data-role="listview" data-theme="d">
+                <li><a href="#gpsPage">Geolocation</a></li>
+                <li><a href="#alertPage">Alert Notification</a></li>
+                <li><a href="#accelPage">Accelerometer</a></li>
+                <li><a href="#cameraPage">Camera</a></li>
+                
+            </ul>
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+
+    <!-- RESEARCH PAGE -->
+    <div data-role="page" id="researchPage" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+            <h1>Week 1 Discussion Post</h1>
+        </div>
+        <div data-role="content" align="left">
+            <ul data-role="listview" data-theme="d">
+                <li><a href="#week1">Week 1 Discussion Post</a></li>
+                <li><a href="#week2">Week 2 Discussion Post</a></li>
+                <li><a href="#">Week 3 Discussion Post</a></li>
+                <li><a href="#">Week 4 Discussion Post</a></li>
+                <li><a href="#videoPage">Week 2 Video Page</a></li>
+                
+            </ul>
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+    
+    <!-- WEEK1 PAGE -->
+    <div data-role="page" id="week1" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+            <h1>Week 1 Discussion Post</h1>
+        </div>
+        <div data-role="content" align="left">
+            <p><h3>What types of native features (on Android and iOS devices) would you be able to implement with the use of HTML/CSS/JS only? (just a hint - iOS can be the tricky one)</h3></p> 
+            Based on my research, since we are using the PhoneGap  software, the only native features we would not be able to access are the compass on older iPhone models.
+            <h3>For your CRUD app revision, which of these do you think you will implement?</h3>
+            I would like to implement the Geolocation, Notification, and camera for my CRUD app.
+            <h3>Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</h3>
+            I have definitely learned that utilizing some sort of revision control is 100% necessary.  I am still not 100% sold on GitHub, as it still gives me problems.
+            <h3>Please describe any design intentions you may have for the AVF Demo app and the revised/new version of your CRUD app.</h3>
+            My app is supposed to be used to track your automobiles service intervals, fuel mileage, etc.  In a perfect world, it would track multiple vehicles and allow users to switch between those vehicles at will.  It would use the Geolocation to determine miles travelled, and would use Notification feature to alert users about important service milestones, etc.  Addtionally, I would love to be able to use the camera to scan the barcode VIN numbers that so many modern vehicles are equipped with nowadays.  We shall see…
+            
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+
+    <!-- WEEK2 PAGE -->
+    <div data-role="page" id="week2" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+            <h1>Week 2 Discussion Post</h1>
+        </div>
+        <div data-role="content" align="left">
+            <p><h3>What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance)</h3></p> 
+            I could use Apple’s Interface Builder to help make my app more accessible.  It allows a developer to add an even higher level of accessibility to his/her software.  Using ALT descriptions will also make my design more usable and accessible for users.  Also, adding accessibility labels to elements within the pages can help.
+            <h3>Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</h3>
+            High price of the accessibility software is actually a problem for many of the end users.  I am not sure there’s not much I see that I can do about that at this point.  I think the largest complaint I found was the lack of ALT tags on web content.  This would make navigating much easier for disabled users, but doesn’t seem to happen as much as it should.
+            <h3>Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</h3>
+            JAWS screenreader is one device that is used for accessibility.  It allows users with sight or reading disabilities to surf the Internet and use programs.  Another device.  The other device that comes to mind is a TDD.  We had a TDD at one of my former workplaces for a coworker.  Essentially it transcribes a telephone conversation into a visible text conversation for those who are hearing-disabled.
+            <h3>Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</h3>
+            VoiceOver is probably the most prominent iOS app I can think of off-hand.  MobileSpeak is another program that is popular in Europe.
+            
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+    
+    
+    <!-- VIDEO PAGE -->
+    <div data-role="page" id="videoPage" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+            </center>
+            <h1>Video</h1>
+        </div>
+            <div data-role="content" align="center">
+                <video width="320" height="240" poster="teaser.jpg" audio="muted">
+                    <source src"example.mp4" type='video/mp4;
+                        codecs="avc1.42E01E, mp4a.40.2"'>
+                    <source src="example.webm" type='video/webm;
+                        codecs="vp8, vorbis"'>
+                    <source src ="example.ogv" type='video/ogg;
+                        codecs="theora, vorbis"'>
+                </video>
+            </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+    
+    
+    <!-- GPS PAGE -->
+    <div data-role="page" id="gpsPage" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+            </center>
+            <h1>GPS</h1>
+        </div>
+        <div data-role="content" align="center">
+            <p id="geolocation">Finding geolocation...</p>
+       
+            <!-- API KEY = AIzaSyAk7lVO1OisoDrF1WX95u09oNBVs7PK6Kk  -->
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+    
+    <!-- ALERT PAGE -->
+   <div data-role="page" id="alertPage" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+            <h1>ALERT</h1>
+        </div>
+        <div data-role="content" align="center">
+            <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+    
+
+    <!-- ACCELEROMETER PAGE -->
+
+    <div data-role="page" id="accelPage" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+            <h1>ACCELEROMETER</h1>
+        </div>
+        <div data-role="content" align="center">
+            <div id="accelerometer">Waiting for accelerometer...</div>
+
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+    
+    
+    <!-- CAMERA PAGE -->
+  <div data-role="page" id="cameraPage" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+            <h1>CAMERA</h1>
+        </div>
+        <div data-role="content" align="center">
+            <button onclick="capturePhoto();">Capture Photo</button> <br>
+            <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+            <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+            <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+            <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+            <img style="display:none;" id="largeImage" src="" />
+
+            
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
+
+    
+	<!-- JavaScript under here -->
+	<script	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+    <script src="cordova-1.7.0.js"></script>
+  <!--  <script src="js/mainNEW.js" type="text/javascript"></script> -->
+	<script src="js/geolocator.js" type="text/javascript"></script>
+    <script src="js/camera.js" type="text/javascript"></script>
+    <script src="js/alert.js" type="text/javascript"></script>
+   <!-- <script src="js/accel.js" type="text/javascript"></script>  -->
+</body>
+</html>
