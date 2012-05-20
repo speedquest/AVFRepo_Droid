@@ -33,7 +33,7 @@ HTML FILE
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAk7lVO1OisoDrF1WX95u09oNBVs7PK6Kk&sensor=true"></script>
 </head>
 
-<body>
+<body onload="onLoad()">
         <!-- Main Page Call  -->
     <div data-role="page" id="home">
        <p align='left'><h3>Nick Weil</h3></p>
@@ -50,7 +50,7 @@ HTML FILE
             <!-- List of links to other pages, done in a 'listview' to stack them -->
             
             <div>
-                <ul data-role="listview" class="menubuttons" data-theme="d">
+                <ul data-role="listview" class="menubuttons" data-theme="c">
                     <li><a href="https://speedquest.cloudant.com/asdweek3/_design/asdweek3/index.html" id="originalAppButton">Original CRUD app</a></li>
                     <li><a href="#" id="revisedAppButton">Revised CRUD app</a></li>
                     <li><a href="#nativeFeatures" id="nativeFeaturesButton">iOS/Android Native Features</a></li>
@@ -58,14 +58,14 @@ HTML FILE
 
                 </ul>
             </div>
-        <div data-role="footer" data-theme="d" data-position="fixed"
+        <div data-role="footer" data-theme="cd" data-position="fixed"
             align="center">
             <a href="#home" data-icon="home">Home</a>
         </div>
     </div>
         
     <!-- NATIVE FEATURES PAGE -->
-    <div data-role="page" id="nativeFeatures" data-theme="d">
+    <div data-role="page" id="nativeFeatures" data-theme="c">
         <div data-role="header" data-position="fixed">
             <center>
                 <img src="images/logbook_header_logo.png" alt="">
@@ -78,7 +78,7 @@ HTML FILE
                 <li><a href="#alertPage">Alert Notification</a></li>
                 <li><a href="#accelPage">Accelerometer</a></li>
                 <li><a href="#cameraPage">Camera</a></li>
-                
+                <li><a href="#compassPage">Compass</a></li>
             </ul>
         </div>
         <div data-role="footer" data-theme="d" data-position="fixed"
@@ -171,13 +171,11 @@ HTML FILE
             <h1>Video</h1>
         </div>
             <div data-role="content" align="center">
-                <video width="320" height="240" poster="teaser.jpg" audio="muted">
-                    <source src"example.mp4" type='video/mp4;
-                        codecs="avc1.42E01E, mp4a.40.2"'>
-                    <source src="example.webm" type='video/webm;
+                <video id="vidWindow" controls src="videos/AVFWeek2.mp4" width="320" height="240" audio="muted">
+                    <source src="videos/AVFWeek2.mp4" type='video/m4v;
+                    codecs="avc1.42E01E, m4va.40.2"'>
+                    <source src="videos/AVFWeek2.webm" type='video/webm;
                         codecs="vp8, vorbis"'>
-                    <source src ="example.ogv" type='video/ogg;
-                        codecs="theora, vorbis"'>
                 </video>
             </div>
         <div data-role="footer" data-theme="d" data-position="fixed"
@@ -267,6 +265,25 @@ HTML FILE
             <a href="#home" data-icon="home">Home</a>
         </div>
     </div>
+    
+    <!-- COMPASS PAGE -->
+    
+    <div data-role="page" id="compassPage" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+            <h1>COMPASS</h1>
+        </div>
+        <div data-role="content" align="center">
+            <div id="compass">getCurrentHeading</div>
+            
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
 
     
 	<!-- JavaScript under here -->
@@ -277,6 +294,7 @@ HTML FILE
 	<script src="js/geolocator.js" type="text/javascript"></script>
     <script src="js/camera.js" type="text/javascript"></script>
     <script src="js/alert.js" type="text/javascript"></script>
-   <!-- <script src="js/accel.js" type="text/javascript"></script>  -->
+    <script src="js/compass.js" type="text/javascript"></script>
+    <script src="js/accel.js" type="text/javascript"></script>
 </body>
 </html>
