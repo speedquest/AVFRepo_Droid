@@ -78,8 +78,8 @@ HTML FILE
                 <li><a href="#alertPage">Alert Notification</a></li>
                 <li><a href="#accelPage">Accelerometer</a></li>
                 <li><a href="#cameraPage">Camera</a></li>
-                <li><a href="#compassPage">Compass</a></li>
                 <li><a href="#mediaPage">Record Media</a></li>
+                <li><a href="#compassPage">Compass</a></li>
             </ul>
         </div>
         <div data-role="footer" data-theme="d" data-position="fixed"
@@ -100,7 +100,7 @@ HTML FILE
             <ul data-role="listview" data-theme="d">
                 <li><a href="#week1">Week 1 Discussion Post</a></li>
                 <li><a href="#week2">Week 2 Discussion Post</a></li>
-                <li><a href="#">Week 3 Discussion Post</a></li>
+                <li><a href="#week3">Week 3 Discussion Post</a></li>
                 <li><a href="#">Week 4 Discussion Post</a></li>
                 <li><a href="#videoPage">Week 2 Video Page</a></li>
                 
@@ -162,6 +162,46 @@ HTML FILE
         </div>
     </div>
     
+    <!-- WEEK3 PAGE -->
+    <div data-role="page" id="week3" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+            <h1>Week 3 Discussion Post</h1>
+        </div>
+        <div data-role="content" align="left">
+            Although the data in some of the reference materials is over a year old now, the general consensus is still the same.  Mobile is here to stay, and poised to take over.  Due to costs, infrastructure and availability, more people will be using mobile devices to do tasks that were once reserved for computers than ever before.
+            China recently passed 1 billion mobile subscribers and has now overtaken the US as the largest smartphone market.  Perhaps we should all be learning Mandarin Chinese programming?
+            
+            
+            
+            Anyhow, here are this weeks Q/A discussion questions:
+            
+            <h3>What are the 'top selling' app categories in the U.S.?</h3>
+            Currently in the United States the top app category is weather apps.  This stands to reason in that everyone, everywhere needs to plan for the weather.  Having the ability to check the weather while you are on the go is almost a necessity since the apps are available.  In second place (and not far behind) are social networking apps.  This again is no surprise with the current mentality of our society in that everyone thinks they need to know what everyone else is doing, where they are doing it at, and whom they are doing it with.  By the way, I am at home doing homework just in case you needed to know!  LOL!  Coming in third are map and navigational apps, and this makes total sense in that many people in our society are on the move, and when they are on the move they need to know where they are going.  What better way to do that then with a map-based mobile application.
+            <h3>What are the 'top selling' app categories in Japan?</h3>
+            In Japan, with their society placing such a high emphasis on worker output, and pride in what you do. It comes as no surprise that Productivity apps top the charts.
+            <h3>What are the 'top selling' app categories in Great Britain?</h3>
+            I am not sure how to interpret the data from England when it tells us that the top app category is entertainment.  Although from speaking with some friends that live in England, they do comment that ‘boring and dull’ are their two typical adjectives in describing most of their daily lives.  Perhaps the English are simply using their smartphones/tablets to get away from the doldrums?
+            <h3>Based on your three answers above, what might you infer about each of the markets listed?</h3>
+            I think I already touched on each of these a bit within my answers without even realizing it, but I think that the ever-changing weather of the U.S. certainly concerns people here in their day-to-day planning of work and entertainment functions.  In Japan, obviously their societal values impel them to maximize their time and be as productive as possible.  And finally in England, the people seem to be looking for entertainment and excitement in what may otherwise be a very structured and dull environment.
+            <h3>What percentage of Android users have the latest/greatest OS in the U.S?</h3>
+            In the article at http://www.technothon.com/android-os-versions-breakdown I found that ONLY 4.9% of Android users are currently using the Ice Cream Sandwich OS, while Gingerbread users account for 64.4% of users.
+            <h3>How might these differences impact development?</h3>
+            Well certainly developers should consider holding off for the time on implementing too many things that are Ice Cream Sandwich specific.  With that said though, most mobile users get new phones every 1-1/2 to 2 years.  So on a monthly basis, the number of Android users with access to Ice Cream Sandwich is going to climb.  At a certain point probably about 1-1/2 years from the release of ICS, the number of ICS users should exponentially increase as users of older phones upgrade to newer equipment and operating systems.  The key there will be to keep the Android users loyalty and prevent them from jumping ship to the rapidly growing and hotly debated iOS platform.
+            <h3>What are the average cost and bandwidth limits per user (in general) in each of the three markets?</h3>
+            Bandwidth costs are very different than I would have guessed.  In the article “How Much Are You Really Paying For Smartphone Data?”, http://www.validas.com/how-much-data-does-a-buck-buy-with-a-smartphone-how-much-are-you-actually-paying-per-megabyte/  the data reflects that United States customers pay $30-$60 for 2GB of data per month.  In the UK customers pay from $15-$50 per 2GB.  Japan is even less at $7-$20 per 2GB.  I suppose the wireless carriers in the UK and Japan can say that the cost is much less due to the much smaller infrastructure required.  They are, after all, on islands that in most cases are smaller than one State in the USA.
+            <h3>How may this impact development?</h3>
+            I am not sure this fact will impact development much.  I say this because although data is currently more expensive here in the United States, there is currently a huge push here for public WiFi and other alternatives to provide consumers with free or very low cost access with their mobile devices.
+            <h3>And, finally, what would be your suggested strategy in project topic and global market choice? Feel free to have a first and second choice.</h3> 
+            I certainly will push for app development in Western and European markets, as those are most familiar to me.  But after studying some of the data, it would seem foolish to completely ignore the possibility of writing apps for countries like China, Japan and India.  Just based on their raw population data, it seems like a target rich environment.
+        </div>
+        <div data-role="footer" data-theme="d" data-position="fixed"
+            align="center">
+            <a href="#home" data-icon="home">Home</a>
+        </div>
+    </div>
     
     <!-- VIDEO PAGE -->
     <div data-role="page" id="videoPage" data-theme="d">
@@ -312,8 +352,8 @@ HTML FILE
     <script src="cordova-1.7.0.js"></script>
   <!--  <script src="js/mainNEW.js" type="text/javascript"></script> -->
 	<script src="js/compass.js" type="text/javascript"></script>
-    <!-- <script src="js/geolocator.js" type="text/javascript"></script> -->
-    <!-- <script src="js/camera.js" type="text/javascript"></script> -->
+    <script src="js/geolocator.js" type="text/javascript"></script>  
+    <script src="js/camera.js" type="text/javascript"></script>
     <script src="js/alert.js" type="text/javascript"></script>
     <script src="js/media.js" type="text/javascript"></script>
     <!-- <script src="js/accel.js" type="text/javascript"></script> -->
