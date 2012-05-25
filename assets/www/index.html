@@ -51,7 +51,7 @@ HTML FILE
             
             <div>
                 <ul data-role="listview" class="menubuttons" data-theme="c">
-                    <li><a href="https://speedquest.cloudant.com/asdweek3/_design/asdweek3/index.html" id="originalAppButton">Original CRUD app</a></li>
+                    <li><a href="#crudPage" id="originalAppButton">Original CRUD app</a></li>
                     <li><a href="#" id="revisedAppButton">Revised CRUD app</a></li>
                     <li><a href="#nativeFeatures" id="nativeFeaturesButton">iOS/Android Native Features</a></li>
                     <li><a href="#researchPage" id="researchButton">Research(Discussions/Videos)</a></li>
@@ -225,6 +225,70 @@ HTML FILE
         </div>
     </div>
     
+    <!-- CRUD PAGE -->
+    <div data-role="page" id="crudPage" data-theme="d">
+        <div data-role="header" data-position="fixed">
+            <center>
+                <img src="images/logbook_header_logo.png" alt="">
+                    </center>
+        </div>
+        <h1>Add A Car to Your Garage</h1>
+    <nav>
+        <!-- Reset the data on the form  -->
+        <a href="#clearCar" id="clearCar">Reset Car Info</a>    
+        <!-- Display the collected data  -->
+        <a href="#displayCar" id="displayCar">Display Car Info</a>
+        <a href="additem.html" id="addNew" style="display:none;">Add Vehicle</a>
+    </nav>
+    <div id="errorControl">
+        <ul id="errors"/></ul>
+    </div>
+    <div id="formControl">
+        <form action="#" method="post" id="carRegister">
+            
+            <fieldset>
+                <legend><h2 id="CarInfo">Car Information</h2></legend>
+                <h3 id="required"> * fields are required to continue </h3>
+                
+                <ul>
+                    <!-- Text Entry  -->
+                    <li><label for="year"><span class="yearRequired">*</span> Car Year :</label><input type="text" id="year" /></li>
+                    
+                    <!--  Car Make -->
+                    <li id="select"><label for="group"><span class="makeRequired">*</span> Car Make: </label></li>
+                    <li><label for="model">Car Model: (Mustang, Camaro, etc.):</label><input type="text" id="model" /></li>
+                    
+                    <!-- Radio Button -->
+                    <li><label for="engineSize">Check your engine type:</label>
+                        <ul class="checkbox">
+                            <li><input type="radio" checked value="4 Cyl." id="cyl4" name="engine"/><label for="cyl4">4 cyl.</label></li>
+                            <li><input type="radio" value="6 Cyl." id="cyl6" name="engine"/><label for="cyl6">6 cyl.</label></li>
+                            <li><input type="radio" value="8 Cyl." id="cyl8" name="engine"/><label for="cyl8">8 cyl.</label></li> 
+                        </ul>
+                        <!-- Date Entry  -->
+                        <li id="OilChange"><label for="lastOilDate"><span class="lastOilDateRequired">*</span> Date of last Oil Change:</label>
+                            <input type="date" size="30" id="lastOilDate"/><br>
+                            <!-- Boolean -->
+                            <label for="synthetic">Check for Synthetic Oil:</label>
+                            <input type="checkbox" name="oil" value="true" id="synthetic"/>
+                            
+                            <!-- Oil Change Duration Slider  -->   
+                            <li><label for="oilDuration">Oil Change Duration(miles):</label><input type="range" min="2000" max="15000" value="3000" step="1000" id="oilDuration" /></li>
+                            
+                            <!-- Notes Box  -->
+                            <li><label for="notes">Notes:</label><br>
+                                <textarea name="notes" rows="3" cols="30" id="notes" /></textarea>
+                                
+                                </ul>
+            </fieldset>
+            <input type="submit" value="Register Car" id="submit" />
+        </form>
+    </div>
+    <div data-role="footer" data-theme="cd" data-position="fixed"
+        align="center">
+        <a href="#home" data-icon="home">Home</a>
+    </div>
+    
     
     <!-- GPS PAGE -->
     <div data-role="page" id="gpsPage" data-theme="d">
@@ -350,12 +414,13 @@ HTML FILE
 	<script	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
     <script src="cordova-1.7.0.js"></script>
-  <!--  <script src="js/mainNEW.js" type="text/javascript"></script> -->
-	<script src="js/compass.js" type="text/javascript"></script>
+    
+	<!-- <script src="js/compass.js" type="text/javascript"></script> -->
     <script src="js/geolocator.js" type="text/javascript"></script>  
     <script src="js/camera.js" type="text/javascript"></script>
     <script src="js/alert.js" type="text/javascript"></script>
     <script src="js/media.js" type="text/javascript"></script>
     <!-- <script src="js/accel.js" type="text/javascript"></script> -->
+    <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
